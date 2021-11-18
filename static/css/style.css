@@ -1,0 +1,43 @@
+.dots {
+    height: 17px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5em;
+  }
+  
+  .dot1,
+  .dot2,
+  .dot3 {
+    height: 100%;
+    width: 17px;
+    border-radius: 50%;
+    margin: 0 7px 0 0;
+  }
+  
+  .dot1 {
+    background-color: #ff605c;
+  }
+  
+  .dot2 {
+    background-color: #ffbd44;
+  }
+  
+  .dot3 {
+    background-color: #00ca4e;
+  }
+
+  .w-60{
+      width:60% !important;
+  }
+
+  .flex-grow-inherit{
+      flex-grow: inherit !important;
+  }
+
+  .rounded-full{
+      border-radius: 50%;
+  }
+
+  .mr-1{
+      margin-right: 1rem !important;
+  }
