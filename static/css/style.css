@@ -41,3 +41,7 @@
   .mr-1{
       margin-right: 1rem !important;
   }
+
+  .text-decoration-strike{
+    text-decoration: line-through !important;
+  }

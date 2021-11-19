@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<div class="card mt-md-2 h-100" style="min-height: 80vh">
+    <div class="card-body">
+        <div>
+         <a href="{% url "task-list" %}" class="shadow-lg p-1 rounded text-decoration-none">
+            <span>
+                <i class="fas fa-arrow-left"></i> Back
+            </span>
+            </a>
+        </div>
+        <form method="POST" class="mt-2">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-outline-primary">Update</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
