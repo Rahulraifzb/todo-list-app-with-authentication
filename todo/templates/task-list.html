@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% load extras %}
+{% block content %}
 <div class="card mt-md-2 h-100">
   {% include "includes/header.html" %}
   <div class="card-body">
@@ -15,9 +17,13 @@
       "
     >
 
-      
+    {% if task.complete %}
+      {% define task.complete as style %}
+    {% else %}
+      {% define task.complete as style %}
+    {% endif %}
 
-      <a href="{% url "task-update" task.id %}" class="text-decoration-none">
+      <a href="{% url "task-update" task.id %}" class="{{style}}">
       <div class="d-flex align-items-center">
         <div class="dots mt-0">
           <div class="dot1"></div>
