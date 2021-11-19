@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<div class="card mt-md-2 h-100" style="min-height: 80vh">
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+            <strong class="text-warning">Are your sure you want to delete this task?</strong>
+            <span>"{{task}}"</span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-primary mt-2 btn-sm">Delete</button> 
+                <a href="{% url "task-list" %}" class="btn btn-outline-warning mt-2 btn-sm">Cancle</a> 
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

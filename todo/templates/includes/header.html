@@ -1,0 +1,49 @@
+<div class="card-header">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <div class="dots">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <div class="dot3"></div>
+      </div>
+      <div class="card-title mb-0">
+      <a href="{% url "logout" %}" class="text-decoration-none">
+        <small>Logout</small>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h4>Hello, {{request.user|title}}</h4>
+        <p>
+          You have {{request.user.tasks.count}} <span style="color: #ffbd44">Incompleted</span> Tasks :(
+        </p>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <form>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Search your task..."
+              name="search"
+            />
+            <button
+              class="btn btn-primary btn-sm"
+              type="button"
+              id="button-addon2"
+            >
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </form>
+    
+        <a
+          href="{% url "task-create" %}"
+          class="btn btn-primary btn-sm rounded-full"
+        >
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
+    </div>
+  </div>
